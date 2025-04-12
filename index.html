@@ -1,72 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cricket World</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+  <header>
     <nav>
-        <ul>
-            <li>Home</li>
-            <li>Players</li>
-            <li>Videos</li>
-            <li>Contact</li>
-        </ul>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#video">Tutorial</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <h1>Welcome to the World of Chess</h1>
+  </header>
 
-    <header>
-        <section>
-            <h1>Welcome to Cricket World</h1>
-            <p>Your one-stop destination for all things cricket!</p>
-            <button id="joinBtn">Join Now</button>
-        </section>
-    </header>
+  <section id="home">
+    <div class="intro">
+      <h2>Play Chess Online</h2>
+      <p>Challenge yourself and others in the classic game of strategy and intellect.</p>
+      <button onclick="alert('Game Coming Soon!')">Start Game</button>
+    </div>
+  </section>
 
-    <section>
-        <h2>Top Cricket Players</h2>
-        <p>Explore some of the greatest cricket players from around the world.</p>
-        <ul>
-            <li>Virat Kohli</li>
-            <li>Steve Smith</li>
-            <li>Babar Azam</li>
-            <li>Ben Stokes</li>
-        </ul>
-    </section>
+  <section id="rules">
+    <h2>Basic Rules of Chess</h2>
+    <p>The game is played on an 8x8 board. Each player begins with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. The objective is to checkmate your opponent's king.</p>
+  </section>
 
-    <section>
-        <h2>Watch Highlights</h2>
-        <iframe width="640" height="360"
-                src="https://www.youtube.com/embed/dFk1sCGSulI"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-        </iframe>
-    </section>
+  <section id="video">
+    <h2>Watch How to Play</h2>
+    <video width="600" controls>
+      <source src="chess-tutorial.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
 
-    <section>
-        <h2>Get in Touch</h2>
-        <form id="contactForm">
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="Enter your name">
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label><br/>
+      <input type="text" id="name" name="name"><br/>
+      <label for="email">Email:</label><br/>
+      <input type="email" id="email" name="email"><br/>
+      <label for="message">Message:</label><br/>
+      <textarea id="message" name="message"></textarea><br/>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Enter your email">
+  <footer>
+    <p>&copy; 2025 Chess Arena. All rights reserved.</p>
+  </footer>
 
-            <label>Message:</label>
-            <textarea name="message" rows="4" placeholder="Type your message"></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 Cricket World. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
