@@ -1,63 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chess Game</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Move Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .move-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .move-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .move-form input, .move-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .move-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .move-form button:hover, .move-form button:focus {
+            background-color: #45a049;
+            outline: none;
+        }
+        .move-list {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .move-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .move-item h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .move-item p {
+            margin-bottom: 0;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
-  <header>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#rules">Rules</a></li>
-        <li><a href="#video">Tutorial</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <a href="#home">Home</a>
+        <a href="#moves">Moves</a>
+        <a href="#tips">Tips</a>
     </nav>
-    <h1>Welcome to the World of Chess</h1>
-  </header>
 
-  <section id="home">
-    <div class="intro">
-      <h2>Play Chess Online</h2>
-      <p>Challenge yourself and others in the classic game of strategy and intellect.</p>
-      <button onclick="alert('Game Coming Soon!')">Start Game</button>
-    </div>
-  </section>
+    <header>
+        <h1>Chess Move Showcase</h1>
+        <p>Share your favorite chess moves and share tips with others!</p>
+    </header>
 
-  <section id="rules">
-    <h2>Basic Rules of Chess</h2>
-    <p>The game is played on an 8x8 board. Each player begins with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. The objective is to checkmate your opponent's king.</p>
-  </section>
+    <main class="container">
+        <form class="move-form" id="moveForm">
+            <label for="moveTitle">Move Title:</label>
+            <input type="text" id="moveTitle" name="moveTitle" required>
 
-  <section id="video">
-    <h2>Watch How to Play</h2>
-    <video width="600" controls>
-      <source src="chess-tutorial.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
+            <label for="moveDescription">Description:</label>
+            <textarea id="moveDescription" name="moveDescription" rows="4" required></textarea>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name:</label><br/>
-      <input type="text" id="name" name="name"><br/>
-      <label for="email">Email:</label><br/>
-      <input type="email" id="email" name="email"><br/>
-      <label for="message">Message:</label><br/>
-      <textarea id="message" name="message"></textarea><br/>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+            <label for="moveImage">Upload Image:</label>
+            <input type="file" id="moveImage" name="moveImage">
 
-  <footer>
-    <p>&copy; 2025 Chess Arena. All rights reserved.</p>
-  </footer>
+            <label for="moveVideo">Upload Video:</label>
+            <input type="file" id="moveVideo" name="moveVideo">
 
-  <script src="script.js"></script>
+            <label for="authorName">Your Name:</label>
+            <input type="text" id="authorName" name="authorName" required>
+
+            <button type="submit" id="submitBtn">Submit Move</button>
+        </form>
+
+        <div class="move-list" id="moveList">
+            <!-- Moves will be added here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Chess Move Showcase. All rights reserved.</p>
+    </footer>
 </body>
 </html>
